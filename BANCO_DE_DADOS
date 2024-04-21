@@ -1,0 +1,36 @@
+Não achei outra forma de upar o banco de dados diretamente no git, então copiei um arquivo txt
+e colei aqui para o senhor verificar a forma como está o banco de dados e até mesmo testa-lo
+Optei por selecionar a tabela USERS e fazer os comandos de INSERÇÃO, REMOÇÃO e CONSULTA
+Está funcionando direitinho, o senhor pode estar testando e so atualizar depois no banco de dados onde está:
+''select * from USERS;''
+
+use meudb;
+create table USERS(
+id int auto_increment primary key,
+name_users varchar(50) not null,
+country varchar(50) not null,
+id_console int
+);
+
+create table VIDEOGAMES(
+id_console int primary key,
+name_videogames varchar(50),
+id_company int,
+release_date DATE
+);
+
+create table GAMES(
+id_game int auto_increment primary key,
+title varchar(50),
+genre varchar(50),
+release_date DATE,
+id_console int
+);
+
+create table COMPANY(
+id_company int auto_increment primary key,
+name_company varchar(50),
+country varchar(50)
+);
+
+select * from USERS;
